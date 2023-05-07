@@ -1,0 +1,96 @@
+﻿<UserControl x:Class="Game2048.Views.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:static="clr-namespace:Game2048.Models"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="Bisque">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" Background="LightSlateGray" Margin="10 10">
+                <TextBlock Grid.Row="0" Foreground="White"  FontSize="15" Text="Srore" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10 0"/>
+                <TextBlock Grid.Row="1" Foreground="White"  Text="{Binding Path=Score, Source={x:Static static:TotalScore.ValueScore}}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Column="1" Background="LightSlateGray" Margin="10 10">
+                <TextBlock FontSize="15" Foreground="White" Text="High Srore" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10 0"/>
+                <TextBlock Text="0" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" Background="LightSlateGray" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0" Background="{Binding Path=listCell[0].ColorBar}" Margin="5 5">
+                <TextBlock FontSize="35" Grid.Row="1" Foreground="Black"  Text="{Binding Path=listCell[0].BarNum}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="1" Background="{Binding Path=listCell[1].ColorBar}" Margin="5 5">
+                <TextBlock FontSize="35" Grid.Row="1" Foreground="Black"  Text="{Binding Path=listCell[1].BarNum}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="2" Background="{Binding Path=listCell[2].ColorBar}" Margin="5 5">
+                <TextBlock FontSize="35" Grid.Row="1" Foreground="Black"  Text="{Binding Path=listCell[2].BarNum}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Row="0" Grid.Column="3" Background="{Binding Path=listCell[3].ColorBar}" Margin="5 5">
+                <TextBlock FontSize="35" Grid.Row="1" Foreground="Black"  Text="{Binding Path=listCell[3].BarNum}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="0" Background="{Binding Path=listCell[4].ColorBar}" Margin="5 5">
+                <TextBlock FontSize="35" Grid.Row="1" Foreground="Black"   Text="{Binding Path=listCell[4].BarNum}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1" Background="{Binding Path=listCell[5].ColorBar}" Margin="5 5">
+                <TextBlock FontSize="35" Grid.Row="1" Foreground="Black"   Text="{Binding Path=listCell[5].BarNum}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="2" Background="{Binding Path=listCell[6].ColorBar}" Margin="5 5">
+                <TextBlock FontSize="35" Grid.Row="1" Foreground="Black"  Text="{Binding Path=listCell[6].BarNum}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="3" Background="{Binding Path=listCell[7].ColorBar}" Margin="5 5">
+                <TextBlock FontSize="35" Grid.Row="1" Foreground="Black"   Text="{Binding Path=listCell[7].BarNum}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="0" Background="{Binding Path=listCell[8].ColorBar}" Margin="5 5">
+                <TextBlock FontSize="35" Grid.Row="1" Foreground="Black"  Text="{Binding Path=listCell[8].BarNum}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="1" Background="{Binding Path=listCell[9].ColorBar}" Margin="5 5">
+                <TextBlock FontSize="35" Grid.Row="1" Foreground="Black"  Text="{Binding Path=listCell[9].BarNum}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="2" Background="{Binding Path=listCell[10].ColorBar}" Margin="5 5">
+                <TextBlock FontSize="35" Grid.Row="1" Foreground="Black"  Text="{Binding Path=listCell[10].BarNum}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="3" Background="{Binding Path=listCell[11].ColorBar}" Margin="5 5">
+                <TextBlock FontSize="35" Grid.Row="1" Foreground="Black"  Text="{Binding Path=listCell[11].BarNum}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+
+            <Grid Grid.Row="3" Grid.Column="0" Background="{Binding Path=listCell[12].ColorBar}" Margin="5 5">
+                <TextBlock FontSize="35" Grid.Row="1" Foreground="Black"  Text="{Binding Path=listCell[12].BarNum}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="1" Background="{Binding Path=listCell[13].ColorBar}" Margin="5 5">
+                <TextBlock FontSize="35" Grid.Row="1" Foreground="Black"  Text="{Binding Path=listCell[13].BarNum}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="2" Background="{Binding Path=listCell[14].ColorBar}" Margin="5 5">
+                <TextBlock FontSize="35" Grid.Row="1" Foreground="Black"  Text="{Binding Path=listCell[14].BarNum}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="3" Background="{Binding Path=listCell[15].ColorBar}" Margin="5 5">
+                <TextBlock FontSize="35" Grid.Row="1" Foreground="Black"  Text="{Binding Path=listCell[15].BarNum}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+
+
+
+
+        </Grid>
+    </Grid>
+</UserControl>
